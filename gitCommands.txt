@@ -92,7 +92,7 @@
 	
 //Git Branches
 	//List all branches
-	git branch
+	git branch -a
 	
 	//Create and Switch to <branch_name>
 	git checkout -b <branch_name>
@@ -100,4 +100,10 @@
 	//Delete branch
 	git branch -d <branch_name>
 
+//Merging
+	//Merge branches
+	git merge <branch_name> (execute this from the branch you want to merge <branch_name> with)
+	
+//Conflicts
+	
 
