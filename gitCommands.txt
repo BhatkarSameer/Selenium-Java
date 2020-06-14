@@ -1,3 +1,6 @@
+//Git help
+git help log
+
 //Create new repo in Project folder
 git init "file_name" \ . (. symbolises current folder)
 
@@ -6,6 +9,11 @@ git status
 
 //Logging records of Commits
 git log (shows all logs)
+		--oneline (displays logs one line per commit)
+		--graph (same as git log just formatted well)
+		--decorate (displays branchwise commits and history)
+		--all (history for all branches in repo)
+
 git show (shows latest commit logs in p4merge tool (press q to exit when bash shows ":"))
 
 //commit related commands
@@ -26,7 +34,30 @@ git commit _blank_ (opens the default editor to enter comments)
 //Remove select files from staging area
 git rm --cached file_name
 
+//Remove edited files from staging area
+git reset HEAD file_name
+
 //Remove File folder
 rm -rf folder_name
+
+//Revert changes to edited file to last version in commit history
+git checkout -- file_name
+
+//Git Aliasing
+//Lists all assigned alias on User global level
+git config --global --list
+
+//Aliasing below command to a shortcut
+git log --oneline --graph --decorate --all
+
+//Assigns <alias name> to the specified git command in quotes
+git config --global alias.<alias name> "log --oneline --graph --decorate --all"
+
+//Run alias
+git <alias name>
+				 -- file_name (displays git log for specified files)
+				 
+
+
 
 
