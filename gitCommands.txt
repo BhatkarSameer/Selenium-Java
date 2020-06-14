@@ -1,8 +1,12 @@
 //Create new repo in Project folder
-git init "file_name"
+git init "file_name" \ . (. symbolises current folder)
 
 //Git state working >> staging (init commit) >> local repo (post commit) >> remote (post push)
 git status
+
+//Logging records of Commits
+git log (shows all logs)
+git show (shows latest commit logs in p4merge tool (press q to exit when bash shows ":"))
 
 //commit related commands
 
@@ -11,4 +15,18 @@ Initial Commit
 npp readMe.md
 
 //Add all edited files to commit queue
-git add file_name / -all
+git add file_name.ext / --all
+
+//Commit 
+git commit _blank_ (opens the default editor to enter comments)
+			-m "Commit Message"
+			-a (adds edited file to commit)
+			-am (adds edited file to commit with specific Commit message)
+
+//Remove select files from staging area
+git rm --cached file_name
+
+//Remove File folder
+rm -rf folder_name
+
+
