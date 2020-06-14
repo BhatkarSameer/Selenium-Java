@@ -1,73 +1,85 @@
 //Git help
-git help log
+	git help log
 
 //Create new repo in Project folder
-git init "file_name" \ . (. symbolises current folder)
+	git init "file_name" \ . (. symbolises current folder)
 
 //Git state working >> staging (init commit) >> local repo (post commit) >> remote (post push)
-git status
+	git status
 
 //Logging records of Commits
-git log (shows all logs)
+	git log (shows all logs)
 		--oneline (displays logs one line per commit)
 		--graph (same as git log just formatted well)
 		--decorate (displays branchwise commits and history)
 		--all (history for all branches in repo)
 
-git show (shows latest commit logs in p4merge tool (press q to exit when bash shows ":"))
+	git show (shows latest commit logs in p4merge tool (press q to exit when bash shows ":"))
 
 //commit related commands
 
-Initial Commit
-//Creates 2 files in response in the local master repo
-npp readMe.md
+	//Creates files in response in the local master repo
+	npp readMe.md
 
-//Add all edited files to commit queue
-git add file_name.ext / --all
+	//Add all edited files to commit queue
+	git add file_name.ext / --all
 
-//To sync deletion of one file from working area with file status in repo
-git add -u (updates status for file_name in repo)
+	//To sync deletion of one file from working area with file status in repo
+	git add -u (updates status for file_name in repo)
 
-//Add all modifications including delete rename create
-git add -A
+	//Add all modifications including delete rename create
+	git add -A
 
-//Commit 
-git commit _blank_ (opens the default editor to enter comments)
-			-m "Commit Message"
-			-a (adds edited file to commit)
-			-am (adds edited file to commit with specific Commit message)
+	//Commit 
+	git commit _blank_ (opens the default editor to enter comments)
+				-m "Commit Message"
+				-a (adds edited file to commit)
+				-am (adds edited file to commit with specific Commit message)
 
-//Remove select files from staging area
-git rm --cached file_name
+	//Remove select files from staging area
+	git rm --cached file_name
 
-//Remove edited files from staging area
-git reset HEAD file_name
+	//Remove edited files from staging area
+	git reset HEAD file_name
 
-//Remove File folder
-rm -rf folder_name
+	//Remove File folder
+	rm -rf folder_name
 
-//Revert changes to edited file to last version in commit history
-git checkout -- file_name
+	//Revert changes to edited file to last version in commit history
+	git checkout -- file_name
 
 //Git Aliasing
-//Lists all assigned alias on User global level
-git config --global --list
+	//Lists all assigned alias on User global level
+	git config --global --list
 
-//Aliasing below command to a shortcut
-git log --oneline --graph --decorate --all
+	//Aliasing below command to a shortcut
+	git log --oneline --graph --decorate --all
 
-//Assigns <alias name> to the specified git command in quotes
-git config --global alias.<alias name> "log --oneline --graph --decorate --all"
+	//Assigns <alias name> to the specified git command in quotes
+	git config --global alias.<alias name> "log --oneline --graph --decorate --all"
 
-//Run alias
-git <alias name>
-				 -- file_name (displays git log for specified files)
-				 
+	//Run alias
+	git <alias name>
+					 -- file_name (displays git log for specified files)
+					 
 //File operations
-//Renaming file (can change set extentions to allowed extentions <.txt to .md> using same command)
-git mv <from_file_name.ext> <to_file_name.ext>
+	//Renaming file (can change set extentions to allowed extentions <.txt to .md> using same command)
+	git mv <from_file_name.ext> <to_file_name.ext>
 
 //Git Ignore
-*.ext (to ignore specific ext files)
-/<folder_name>/* (to ignore branch folder)
-/<folder_name>/** (to ignore entire directory)
+	*.ext (to ignore specific ext files)
+	/<folder_name>/* (to ignore branch folder)
+	/<folder_name>/** (to ignore entire directory)
+
+//Git 
+	//Get diff from <commit_entry> and working directory
+	git diff
+	
+	git diff <commit_entry> HEAD (gets diff between <commit_entry> and last made commit)
+	
+	//Opens difftool and displays differences in Working and Last commit
+	git difftool
+	
+	git difftool <commit_entry> HEAD (opens difftool and displays diff between <commit_entry> and last made commit)
+
+
