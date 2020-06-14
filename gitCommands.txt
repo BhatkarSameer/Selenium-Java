@@ -66,3 +66,8 @@ git <alias name>
 //File operations
 //Renaming file (can change set extentions to allowed extentions <.txt to .md> using same command)
 git mv <from_file_name.ext> <to_file_name.ext>
+
+//Git Ignore
+*.ext (to ignore specific ext files)
+/<folder_name>/* (to ignore branch folder)
+/<folder_name>/** (to ignore entire directory)

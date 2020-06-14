@@ -1,2 +1,2 @@
 *.log
-mvn_repo_local\*
+/mvn_repo_local/**
