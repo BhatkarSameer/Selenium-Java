@@ -105,5 +105,7 @@
 	git merge <branch_name> (execute this from the branch you want to merge <branch_name> with)
 	
 //Conflicts
+	//Display differences in file between branches
+	cat <file_name.ext>
 	
 
