@@ -126,3 +126,15 @@
 	
 	//Easier way to list out commit history
 	git show <tag_name> (Lists out all commits made using the particular tag and the details comitted)
+	
+//Git Stashing
+	//Save working directory in current state and update gitIgnore to exclude merge files
+	git stash
+	
+	//Stash list to display what was stashed and when
+	git stash list
+	
+	//When trying to apply the stashed files to branch folders
+	git stash pop (will apply the latest created stash to the current working directory)
+	
+	
