@@ -14,7 +14,11 @@
 		--decorate (displays branchwise commits and history)
 		--all (history for all branches in repo)
 
-	git show (shows latest commit logs in p4merge tool (press q to exit when bash shows ":"))
+	//Shows latest commit logs in p4merge tool (press q to exit when bash shows ":")
+	git show
+	
+	//Reflog shows commits with comments \ actions performed
+	git reflog
 
 //commit related commands
 
@@ -137,4 +141,16 @@
 	//When trying to apply the stashed files to branch folders
 	git stash pop (will apply the latest created stash to the current working directory)
 	
+//Travelling between commits //Very risky
+	//Commit Soft rollback / changes the location of the head to <commit_entry> no changes to commits
+	git reset <commit_entry> --soft
+	
+	//Commit mixed rollback / removes all commits prior to <commit_entry> in to Working area
+	git reset <commit_entry> --mixed
+
+	//Commit hard rollback / removes all commits prior to <commit_entry> from all environments
+	git reset <commit_entry> --hard
+	
+	//Using reset and reflog User can move through any action performed
+	git reset --hard <commit_entry>
 	
