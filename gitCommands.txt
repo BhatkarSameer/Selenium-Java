@@ -108,4 +108,7 @@
 	//Display differences in file between branches
 	cat <file_name.ext>
 	
+	//Mergetool to manually edit the conflicted file
+	git mergetool
+	
 
