@@ -6,7 +6,22 @@
 	git remote add <remote_repo_name> <remote_repo_url> (#1 remote repo name is set to "origin" by default)
 	
 //Git Push
-	//Command with "--tags" syncs local_repo tags with remote_repo
+	//Command with "--tags" syncs local_repo tags with remote_repo (tags are important to mark code releases)
 	git push -u <remote_repo_name> <master> --tags
 	
+//Communicating with SSH
+	//Create a .ssh directory in Home (Command prompt as Admin)
+	mkdir .ssh
 	
+	//Navigate into .ssh using "cd .ssh"
+	//Generating a key
+	ssh-keygen -t rsa -C "<user_email_address>
+	(edit prompted values if necessary only)
+	
+	//Edit pub file
+	npp id_rsa.pub (Copy and register the contents in remote_repo SSH keys)
+	
+	//Verifying SSH connectivity
+	//(Command prompt as Admin and inside .ssh folder)
+	ssh -T git@github.com (Enter and type Yes when prompted)
+
