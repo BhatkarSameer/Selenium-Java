@@ -25,6 +25,12 @@ npp readMe.md
 //Add all edited files to commit queue
 git add file_name.ext / --all
 
+//To sync deletion of one file from working area with file status in repo
+git add -u (updates status for file_name in repo)
+
+//Add all modifications including delete rename create
+git add -A
+
 //Commit 
 git commit _blank_ (opens the default editor to enter comments)
 			-m "Commit Message"
@@ -57,7 +63,6 @@ git config --global alias.<alias name> "log --oneline --graph --decorate --all"
 git <alias name>
 				 -- file_name (displays git log for specified files)
 				 
-
-
-
-
+//File operations
+//Renaming file (can change set extentions to allowed extentions <.txt to .md> using same command)
+git mv <from_file_name.ext> <to_file_name.ext>
