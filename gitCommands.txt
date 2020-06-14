@@ -71,7 +71,7 @@
 	/<folder_name>/* (to ignore branch folder)
 	/<folder_name>/** (to ignore entire directory)
 
-//Git 
+//Git Commit comparisons
 	//Get diff from <commit_entry> and working directory
 	git diff
 	
@@ -81,5 +81,14 @@
 	git difftool
 	
 	git difftool <commit_entry> HEAD (opens difftool and displays diff between <commit_entry> and last made commit)
+	
+//Git Branching
+	//List all branches
+	git branch
+	
+	//Create branch
+	git checkout -b <branch_name> (creates and switches to <branch_name>)
+	
+	
 
 
