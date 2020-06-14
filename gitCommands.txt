@@ -111,4 +111,18 @@
 	//Mergetool to manually edit the conflicted file
 	git mergetool
 	
+//Git Tags to set additional info
+	//Creates a tag <tag_name>
+	git tag <tag_name> (light-weight\no info tag)
+	
+	//Creates an annotated \ informational <tag_name>
+	git tag -a <tag_name> -m "Commit message to provide info to the tag"
+	
+	//Delete tag
+	git tag -d <tag_name>
 
+	//List all tags
+	git tag --list
+	
+	//Easier way to list out commit history
+	git show <tag_name> (Lists out all commits made using the particular tag and the details comitted)
