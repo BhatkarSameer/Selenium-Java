@@ -96,5 +96,8 @@
 	
 	//Create and Switch to <branch_name>
 	git checkout -b <branch_name>
+	
+	//Delete branch
+	git branch -d <branch_name>
 
 
