@@ -71,15 +71,30 @@
 	/<folder_name>/* (to ignore branch folder)
 	/<folder_name>/** (to ignore entire directory)
 
-//Git 
+//Git Commit compare
 	//Get diff from <commit_entry> and working directory
 	git diff
 	
-	git diff <commit_entry> HEAD (gets diff between <commit_entry> and last made commit)
+	//Get diff between <commit_entry> and last made commit
+	git diff <commit_entry> HEAD
+	
+	//Get diff between latest commits on branches
+	git diff <branch_name> master \ <branch_name>
 	
 	//Opens difftool and displays differences in Working and Last commit
 	git difftool
 	
-	git difftool <commit_entry> HEAD (opens difftool and displays diff between <commit_entry> and last made commit)
+	 //Opens difftool and displays diff between <commit_entry> and last made commit
+	git difftool <commit_entry> HEAD
+
+	//Get difftool to compare between latest commits on branches
+	git difftool <branch_name> master \ <branch_name>
+	
+//Git Branches
+	//List all branches
+	git branch
+	
+	//Create and Switch to <branch_name>
+	git checkout -b <branch_name>
 
 
