@@ -152,5 +152,4 @@
 	git reset <commit_entry> --hard
 	
 	//Using reset and reflog User can move through any action performed
-	git reset --hard <commit_entry>
-	
+	git reset --hard <commit_entry>	

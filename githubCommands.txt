@@ -1,0 +1,8 @@
+//Github Remote Setup
+	//To view remote repo connections
+	git remote -v
+	
+	//Add remote repo
+	git remote add <remote_repo_name> <remote_repo_url> (#1 remote repo name is set to "origin" by default)
+	
+	
