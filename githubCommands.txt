@@ -5,4 +5,8 @@
 	//Add remote repo
 	git remote add <remote_repo_name> <remote_repo_url> (#1 remote repo name is set to "origin" by default)
 	
+//Git Push
+	//Command with "--tags" syncs local_repo tags with remote_repo
+	git push -u <remote_repo_name> <master> --tags
+	
 	
