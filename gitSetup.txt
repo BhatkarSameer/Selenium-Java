@@ -1,0 +1,27 @@
+//After adding notepad++ to Path variable execute below
+notepadPP ~/.bash_profile
+
+//adding config entry for global editor as notepad++
+git config --global core.editor "notepadPP -multiInst -nosession"
+
+//global editor is set if below command results in opening notepad++
+git config --global -e
+
+//After installing p4merge visual diff tool execute below commands
+//Adds config entry for global diff tool
+git config --global diff.tool p4merge
+
+//Adds config path for global diff tool
+git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+
+//Disables the Ask everytime when comparing merge files
+git config --global difftool.promt false
+
+//Configure p4merge as graphical merge tool
+git config --global merge.tool p4merge
+
+//Adds config path for global merge tool
+git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+
+//Disables the Ask everytime when comparing merge files
+git config --global mergetool.promt false

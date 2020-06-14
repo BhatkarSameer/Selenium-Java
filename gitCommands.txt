@@ -1,0 +1,14 @@
+//Create new repo in Project folder
+git init "file_name"
+
+//Git state working >> staging (init commit) >> local repo (post commit) >> remote (post push)
+git status
+
+//commit related commands
+
+Initial Commit
+//Creates 2 files in response in the local master repo
+npp readMe.md
+
+//Add all edited files to commit queue
+git add file_name / -all

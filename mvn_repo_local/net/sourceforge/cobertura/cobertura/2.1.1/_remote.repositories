@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Jun 12 14:59:41 IST 2020
+cobertura-2.1.1.pom>central=
+cobertura-2.1.1.jar>central=
+cobertura-2.1.1-sources.jar>central=
