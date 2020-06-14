@@ -24,4 +24,23 @@
 	//Verifying SSH connectivity
 	//(Command prompt as Admin and inside .ssh folder)
 	ssh -T git@github.com (Enter and type Yes when prompted)
+	
+//Cloning a repo from remote to local folder <folder_name> (outside existing local_repo)
+	git clone <ssh path> \ <https path> <folder_name>
+	
+//Removing folder recursively
+	rm -rf <folder_name>
+	
+//Copy files from any folder to local_repo
+	1. Create remote_repo in github
+	2. Run below command in new folder intended to become a local_repo
+	git clone <ssh path> \ <https path> <folder_name>
+	3. Initialise the <folder_name> as git local_repo
+	4. Navigate inside local_repo bash
+	5. Run below command to copy contents of any other file into the newly created local_repo
+	cp -R ~/path_to_copy_from/* . (run this on bash inside local_repo)
+	
+
+	
+	
 
