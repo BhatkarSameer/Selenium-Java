@@ -75,19 +75,30 @@
 	//Get diff from <commit_entry> and working directory
 	git diff
 	
-	git diff <commit_entry> HEAD (gets diff between <commit_entry> and last made commit)
+	//Gets diff between <commit_entry> and last made commit
+	git diff <commit_entry> HEAD
+	
+	//Get diff between latest commit of 2 branches
+	git diff <master> <branch_name>
 	
 	//Opens difftool and displays differences in Working and Last commit
 	git difftool
 	
-	git difftool <commit_entry> HEAD (opens difftool and displays diff between <commit_entry> and last made commit)
+	//Opens difftool and displays diff between <commit_entry> and last made commit
+	git difftool <commit_entry> HEAD
+	
+	//Get diff between latest commit of 2 branches
+	git difftool <master> <branch_name>
 	
 //Git Branching
 	//List all branches
 	git branch
 	
-	//Create branch
-	git checkout -b <branch_name> (creates and switches to <branch_name>)
+	//Create and switche to <branch_name>
+	git checkout -b <branch_name>
+	
+	//Switch branches
+	git checkout <branch_name>
 	
 	
 
