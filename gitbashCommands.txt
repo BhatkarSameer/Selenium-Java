@@ -151,8 +151,12 @@
 	//Deleting tags remote_repo
 	git push origin :<tag_name>
 	
-//Comitting to a specific tag_name
-	//
+	//Comitting to a specific tag_name
+	//Assigning a tag to a specific commit\push
+	git tag -f <tag_name> <commit_entry>
+	
+	//Assigning a local tag_name to an existing remote_repo tag
+	git push --force origin <tag_name>
 	
 //Git Stashing
 	//Save working directory in current state and update gitIgnore to exclude merge files
