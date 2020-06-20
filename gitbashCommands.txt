@@ -137,6 +137,13 @@
 	//To create Release/ Annotated tags
 	git tag -a <tag_name> -m "Message for the tag details" <commit_entry>
 	
+	//Pushing local tag_name to Github
+	//Make sure all commits are cleared locally and remotely
+	git push origin <tag_name>
+	
+	//Pushing all locally created tags to Github
+	git push --tags
+	
 //Git Stashing
 	//Save working directory in current state and update gitIgnore to exclude merge files
 	git stash

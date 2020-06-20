@@ -49,7 +49,4 @@
 //Commit Conflict resolution
 	//Opens configured merge tool
 	git mergetool
-	
-	
-	
 
