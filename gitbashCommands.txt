@@ -144,6 +144,16 @@
 	//Pushing all locally created tags to Github
 	git push --tags
 	
+	//Deleting tags
+	//Deleting tags in local_repo
+	git tag -d <tag_name>
+	
+	//Deleting tags remote_repo
+	git push origin :<tag_name>
+	
+//Comitting to a specific tag_name
+	//
+	
 //Git Stashing
 	//Save working directory in current state and update gitIgnore to exclude merge files
 	git stash
