@@ -128,8 +128,35 @@
 	//List all tags
 	git tag --list
 	
-	//Easier way to list out commit history
+	//Easier way to list out detailed history per commit
 	git show <tag_name> (Lists out all commits made using the particular tag and the details comitted)
+	
+	//To create Simple tag at the current HEAD position in specified branch
+	git tag <tag_name> <local_repo>
+	
+	//To create Release/ Annotated tags
+	git tag -a <tag_name> -m "Message for the tag details" <commit_entry>
+	
+	//Pushing local tag_name to Github
+	//Make sure all commits are cleared locally and remotely
+	git push origin <tag_name>
+	
+	//Pushing all locally created tags to Github
+	git push --tags
+	
+	//Deleting tags
+	//Deleting tags in local_repo
+	git tag -d <tag_name>
+	
+	//Deleting tags remote_repo
+	git push origin :<tag_name>
+	
+	//Comitting to a specific tag_name
+	//Assigning a tag to a specific commit\push
+	git tag -f <tag_name> <commit_entry>
+	
+	//Assigning a local tag_name to an existing remote_repo tag
+	git push --force origin <tag_name>
 	
 //Git Stashing
 	//Save working directory in current state and update gitIgnore to exclude merge files

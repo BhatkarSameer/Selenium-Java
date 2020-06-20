@@ -46,4 +46,7 @@
 //Rebase is done when remote_repo is behind local_repo commits and User does not want to merge
 	git push --rebase
 	
+//Commit Conflict resolution
+	//Opens configured merge tool
+	git mergetool
 
