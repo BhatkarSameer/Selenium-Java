@@ -131,6 +131,12 @@
 	//Easier way to list out commit history
 	git show <tag_name> (Lists out all commits made using the particular tag and the details comitted)
 	
+	//To create Simple tag at the current HEAD position in specified branch
+	git tag <tag_name> <local_repo>
+	
+	//To create Release/ Annotated tags
+	git tag -a <tag_name> -m "Message for the tag details" <commit_entry>
+	
 //Git Stashing
 	//Save working directory in current state and update gitIgnore to exclude merge files
 	git stash
