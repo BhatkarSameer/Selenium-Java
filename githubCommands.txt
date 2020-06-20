@@ -40,7 +40,10 @@
 	5. Run below command to copy contents of any other file into the newly created local_repo
 	cp -R ~/path_to_copy_from/* . (run this on bash inside local_repo)
 	
+//Delete remote branch from Bash
+	git push origin :<remote_repo_name>
 
-	
+//Rebase is done when remote_repo is behind local_repo commits and User does not want to merge
+	git push --rebase
 	
 
