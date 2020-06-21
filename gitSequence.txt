@@ -1,0 +1,44 @@
+//GitHub Forking (Copying a public Remote_Repo to Local and user's Remote_Repo)
+	//Locate public web repo on GitHub
+	
+	//Fork the public web repo (User can see one repo added to his profile)
+	
+	//Cloning the fork to local space i.e outside existing repo folders to avoid overlap \ conflicts
+	cd .. (moves out of existing repo and moves to Home directory)
+	
+	//ensure you cannot see <local_repo> name in CMD
+	pwd (verifies you are not in any local_repo)
+	
+	git clone <fork_repo_path>
+	
+	git cd <fork_repo_name>
+
+//GitBash Start (ensure you are in local_fork_repo)
+
+	//Add Readme \ gitIgnore if required
+	<editor_alias> README.md
+	
+	//Follow gitSetup.txt for pre-requisites and shortcut commands
+	
+	//Branching in the fork_repo (Create branch to mark Blank repo as Init stage repo)
+	git checkout -b <branch_name>
+	
+	//View branch
+	git branch (displays branches in current working_fork_repo)
+				-a (displays all branches in local_fork_repo)
+				
+	//Commit changes to local_fork_repo
+	git commit -am "Commit message"
+	
+	//Creating Tags to assign the Initial commit in local_fork_repo
+	git tag -a <tag_name> -m "Message for the tag details" <commit_entry>
+
+	//Check remote_fork_repo is connected
+	git remote -v
+	
+	//Push changes to remote_fork_repo
+	//Make sure all commits are cleared locally and remotely
+	git push origin <tag_name>
+	
+	//Verify remote_fork_repo has all the additions done in local_fork_repo
+	
