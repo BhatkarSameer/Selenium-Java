@@ -1,0 +1,17 @@
+//Gists are sub-versions of actual Git repo
+	//Create and maintain Gists from Remote and Local
+	//Clone gist as a local_repo
+	git clone <gist_remote_url> <local_gist_name>
+	
+	//Gist maintain is same as Git repo maintain
+	
+	//Sharing gist
+	//Just copy paste the gist url in browser
+	
+	//Delete gist
+	//Run command from out of the local_gist_repo
+	rm -rf <local_gist_name>
+
+//Git Organisations
+	//Setup
+	
