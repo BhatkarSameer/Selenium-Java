@@ -1,0 +1,28 @@
+//GitHub Issues
+	//Labels and Milestones
+	//Add Issues tab to GitHub repo using Settings
+	
+	//Issues track Pull requests and consist of labels and milestones to mark important pull requests
+	//Issues can be used as specific enhancements done to code and can be tracked similarly
+
+//Closing Issues using GitBash
+	//When you create an Issue, it is bydefault marked with a number which states the number of poull request assigned to that issue. i.e if issue created on 2nd Pull request to the remote_repo, issue is assigned #2
+	
+	//Directly closing an open issue from gitBash
+	git commit -am "<Message>, #<issue_index_number>"
+	
+	//To sync the closing of the issue to GitHub
+	git push
+	
+	//To assign commit in GitHub
+	//Add the Issue to Commit comment using # after creating the issue
+
+Benefits:
+	1. If a project has multiple collaborators working individually on different enhancements, Issues can track them accordingly and can assign each user to a specific enhancement.
+	
+	2. Eases out the trail chain of pull requests done to the working_remote_repo
+	
+	3. Issues marked with Labels and milestones can be treated as User-stories, where labels are the type of work, and milestones are like sprints or deliverable timelines and can be tracked using dates and issues.
+	
+	
+	
