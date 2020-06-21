@@ -46,7 +46,7 @@
 	//Remove edited files from staging area
 	git reset HEAD file_name
 
-	//Remove File folder
+	//Delete File folder entirely
 	rm -rf folder_name
 
 	//Revert changes to edited file to last version in commit history
@@ -69,6 +69,19 @@
 //File operations
 	//Renaming file (can change set extentions to allowed extentions <.txt to .md> using same command)
 	git mv <from_file_name.ext> <to_file_name.ext>
+	
+	//Undo file changes and revert to previous version before commit
+	git reset HEAD <file_name>
+			OR
+	//If file was not comitted lately
+	git checkout <file_name>
+	
+	//Deleting file from Disk
+	git rm <file_name>
+	
+	//Deleting file from local_repo but not from disk
+	git rm <file_name> --cache
+	
 
 //Git Ignore
 	*.ext (to ignore specific ext files)
