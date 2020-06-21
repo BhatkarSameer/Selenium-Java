@@ -47,6 +47,32 @@
 	
 	//The pull request marks the commit for both the remote_fork_repo and parent_fork_repo
 	
+//Keeping parent_fork_repo and remote_fork_repo in Sync
+	//Star the contributing repositories linked to remote_fork_repo
+	
+	//Navigate to master branch for local_fork_repo
+	git checkout <local_fork_repo_branch_master>
+	
+	//List out all remote repositories connected to the local_fork_repo_branch_master
+	git remote -v
+	
+	//Add the parent_fork_repo to the remote repo list for local_fork_repo_branch_master
+	git remote add <parent_fork_repo_upstream_name> <parent_fork_repo_upstream_url> 
+	
+	//Fetch updates from parent_fork_repo directly to local_fork_repo_branch_master
+	git pull <parent_fork_repo_upstream_name> <local_fork_repo_branch_master>
+	
+	//Push local_fork_repo_branch_master to remote_fork_repo
+
+	//When there is a branch conflicts
+	git branch -a (lists all existing branches including local and remote for the working_fork_repo)
+	
+	//Delete branch
+	git branch -d <branch_name>
+	
+	//If branch_name is displayed in local_fork_repo but not in remote_fork_repo
+	git fetch -p (syncs any deletes listed in remote_fork_repo to local_fork_repo)
+	
 Benefits ::
 	1. The user accepting the pull to parent_fork_repo needs write access but the user comitting to it doesnt.
 	
