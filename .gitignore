@@ -1,3 +1,6 @@
 *.log
-/mvn_repo_local/**
 *.orig
+*.git*
+/mvn_repo_local/**
+/JAVA_Selenium/**
+*multiIst.*

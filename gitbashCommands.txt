@@ -46,7 +46,7 @@
 	//Remove edited files from staging area
 	git reset HEAD file_name
 
-	//Remove File folder
+	//Delete File folder entirely
 	rm -rf folder_name
 
 	//Revert changes to edited file to last version in commit history
