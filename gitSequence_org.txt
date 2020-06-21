@@ -1,0 +1,19 @@
+//Git Organisations
+
+	//create a remote repo and clone it to local (cloning not required yet)
+	
+	//create an organisation \ add member
+	
+	//link organisation_remote_repo to member local_repo
+	git remote add <org_local_repo_name> <org_remote_repo_url>
+	
+	//check remote link
+	git remote -v
+	
+	//sync branches from org_remote_repo to org_local_repo
+	git fetch <org_local_repo_name>
+				OR
+	git fetch --all (this results in sync of linked branches)
+	
+	//verify branches
+	git branch -a

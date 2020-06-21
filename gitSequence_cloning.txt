@@ -1,0 +1,53 @@
+//Regular sequencing of a Repository
+
+	1. Create a Repository on GitHub
+	2. Copy clone path
+	3. Use bash to navigate to folder locally
+		cd <file_path>
+	4. Initialise the folder as a Git repository
+		git init
+	5. Run a status command to verify which files are required to be added to the commit
+		git status
+	6. Add remote_repo to local_repo_master
+		git remote add <remote_repo_name> <remote_repo_path>
+		(try to keep names distinct for remote_repo and local_repo_master)
+	7. Verify remote is configured
+		git remote -v
+	8. Git pull from remote_repo to local_repo_master
+		git pull <remote_repo_name> <local_repo_master>
+	9. Run an add command to stage the desired files in staging area
+		git add .
+			OR
+		git add <file_name.>.<extn>
+	10. Commit files to mark the 1st commit start
+		git commit -am "Initial Commit from local_repo_master"
+	11. Create tag to mark the commit as 1st commit
+		git tag -a <tag_name> -m "Tag marking the 1st commit from local_repo_master"
+	12. Verify tag is assigned to 1st commit
+		git show <tag_name>
+	13. Push changes done to the files to remote_repo
+		git push <remote_repo_name> <local_repo_master>
+							OR
+		git push <remote_repo_name> <local_repo_master> --tags
+	14. If error for unrelated histories pops
+		git push <remote_repo_name> <local_repo_master> --allow-unrelated-histories
+	15. To verify changes are bi-directional
+		Update README.md from GitHub and Commit directly to remote_repo_master
+	16. Pull from remote_repo_master to local_repo_master
+		git pull <remote_repo_master> <local_repo_master>
+	17. Create local develop branch
+		git checkout -b <local_repo_develop>
+	18. Check status
+		git status
+	19. Open \ Add some file or data to existing files and commit
+		git commit -am "First commit from Develop branch local"
+	20. Can create tag as done earlier
+	21. Pushing changes from local_repo_develop to remote_repo and create a develop branch on gitHub
+		git push <remote_repo_name> <local_repo_develop>
+	22. Merging local repo \ Merging remote repo
+		22.1 For remote repo, GitHub will do it on click of Compare and Pull request
+		22.2 For local repo, run in sequence
+			git checkout <local_repo_master>
+			git merge <local_repo_develop>
+	
+
