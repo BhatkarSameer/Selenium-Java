@@ -1,7 +1,7 @@
 //GitHub Forking (Copying a public Remote_Repo to Local and user's Remote_Repo)
-	//Locate public web repo on GitHub
+	//Locate public web repo OR parent_fork_repo on GitHub
 	
-	//Fork the public web repo (User can see one repo added to his profile)
+	//Fork the parent_fork_repo (User can see one repo added to his profile)
 	
 	//Cloning the fork to local space i.e outside existing repo folders to avoid overlap \ conflicts
 	cd .. (moves out of existing repo and moves to Home directory)
@@ -42,3 +42,16 @@
 	
 	//Verify remote_fork_repo has all the additions done in local_fork_repo
 	
+	//Pushing changes this way will create 1 pull request for two repos
+	//On gitHub user can see that the pull request in the remote_fork_repo is dispaying 2 notifications of pull
+	
+	//The pull request marks the commit for both the remote_fork_repo and parent_fork_repo
+	
+Benefits ::
+	1. The user accepting the pull to parent_fork_repo needs write access but the user comitting to it doesnt.
+	
+	2. The parent_fork_repo owner can review the pull request from remote_fork_repo before merging to parent_fork_repo
+	
+	3. Reverting a pull request is also an option
+	
+	4. Everytime the parent_fork_repo and remote_fork_repo are in sync, the branches created during the pull can be deleted to avoid redundant code
