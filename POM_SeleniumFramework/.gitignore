@@ -1,0 +1,8 @@
+/mvn_repo_local/**
+/JAVA_Selenium/**
+/.idea/**
+/target/**
+/screenshots/**
+**/*.exe
+*/pom.xml
+**/*.log
