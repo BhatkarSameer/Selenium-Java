@@ -21,6 +21,7 @@ public class loginTest {
 
         homePage home = new homePage (driver);
         home.homePageHeader ();
+        driver.quit ();
 
     }
 
