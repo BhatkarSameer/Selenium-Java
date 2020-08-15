@@ -1,27 +1,24 @@
 package org.selenium.pomFramework.rough;
 
+import Base.Page;
 import PageFactory.homePage;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import PageFactory.seleniumPages.page_SeleniumJava;
+import PageFactory.seleniumPages.page_SeleniumPython;
 
-public class loginTest {
-
-    public static WebDriver driver;
+public class loginTest extends Page {
 
     public static void main(String[] args) {
 
-        WebDriverManager.firefoxdriver ().setup ();
-        driver = new FirefoxDriver ();
-        System.out.println ("Firefox is being launched to Run the tests");
+        //Instantiating objects of child classes
+        homePage home = new homePage ();
+        home.headerSection ();
 
-        driver.get ("https://www.seleniumeasy.com/");
+        page_SeleniumJava seleniumJava = new page_SeleniumJava ();
+        //method calling for Selenium Java screens
 
-        driver.manage ().window ().maximize ();
-
-        homePage home = new homePage (driver);
-        home.homePageHeader ();
-        driver.quit ();
+        page_SeleniumPython seleniumPython = new page_SeleniumPython ();
+        //method calling for Selenium Py
+        // screens
 
     }
 

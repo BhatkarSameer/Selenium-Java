@@ -1,12 +1,12 @@
 package org.selenium.pomFramework.utilities;
 
+import Base.Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.selenium.pomFramework.rough.loginTest;
 
 import java.util.List;
 
-public class webDefinitions extends loginTest {
+public class webDefinitions extends Page {
 
     public static List<WebElement> handleHREFS(String locator) {
 

@@ -1,43 +1,31 @@
 package PageFactory;
 
+import Base.Page;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class homePage {
-
-    WebDriver driver;
-
-    public homePage(WebDriver driver) {
-
-        this.driver = driver;
-
-    }
+public class homePage extends Page {
 
     public void homePageHeader() {
 
-            try{
-                driver.manage ().timeouts ().implicitlyWait (50, TimeUnit.SECONDS);
-                WebElement element = driver.findElement (By.xpath ("//*[@id=\"site-name\"]"));
-                if (element != null) {
-                    element.click ();
-                    System.out.println ("Reached home page of " + element.getText ());
-                }
-
-                element = driver.findElement (By.cssSelector ("//*[@class='easy-title']"));
-                if (element != null) {
-                    System.out.println ("Validating reaching home page" + element.getText ());
-                }
-            }
-            catch (Exception exception){
-                System.out.println (exception.getMessage ());
+        try {
+            driver.manage ().timeouts ().implicitlyWait (50, TimeUnit.SECONDS);
+            WebElement element = driver.findElement (By.xpath ("//*[@id=\"site-name\"]"));
+            if (element != null) {
+                element.click ();
+                System.out.println ("Reached home page of " + element.getText ());
             }
 
-        headerSection ();
-
+            element = driver.findElement (By.cssSelector ("//*[@class='easy-title']"));
+            if (element != null) {
+                System.out.println ("Validating reaching home page" + element.getText ());
+            }
+        } catch (Exception exception) {
+            System.out.println (exception.getMessage ());
+        }
     }
 
     public void headerSection() {
@@ -67,7 +55,7 @@ public class homePage {
         }
     }
 
-    public void selenium() {
+    public void seleniumScreen() {
 
         WebElement seleniumJava = driver.findElement (By.cssSelector ("#navbar-collapse > nav > ul > li.expanded.active.dropdown.open > ul > li.first.leaf"));
 
@@ -76,37 +64,80 @@ public class homePage {
         seleniumJava.click ();
         System.out.println (driver.findElement (By.cssSelector ("div.section-title")).getText ());
 
-    }
-
-    public void testng() {
-
-    }
-
-    public void maven() {
+        seleniumPython.click ();
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
 
     }
 
-    public void jenkins() {
+    public void testNGScreen() {
+
+        WebElement testNG = driver.findElement (By.xpath ("//*[@id='navbar-collapse']/nav/ul/li[4]"));
+        testNG.click ();
+
+        System.out.println (driver.findElement (By.cssSelector ("body > div.main-container.container-fluid > div > section > div.section-title")).getText ());
 
     }
 
-    public void protractor() {
+    public void mavenScreen() {
+
+        WebElement maven = driver.findElement (By.xpath ("//*[@id=\"navbar-collapse\"]/nav/ul/li[4]"));
+        maven.click ();
+
+        System.out.println (driver.findElement (By.cssSelector ("body > div.main-container.container-fluid > div > section > div.section-title")).getText ());
 
     }
 
-    public void appium() {
+    public void jenkinsScreen() {
+
+        WebElement jenkins = driver.findElement (By.cssSelector ("//*[@id=\"navbar-collapse\"]/nav/ul/li[5]"));
+        jenkins.click ();
+
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
 
     }
 
-    public void apache() {
+    public void protractorScreen() {
+
+        WebElement protractor = driver.findElement (By.cssSelector ("#navbar-collapse > nav > ul > li:nth-child(6)"));
+        protractor.click ();
+
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
 
     }
 
-    public void katalon() {
+    public void appiumScreen() {
+
+        WebElement appium = driver.findElement (By.cssSelector ("#navbar-collapse > nav > ul > li:nth-child(7)"));
+        appium.click ();
+
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
 
     }
 
-    public void log4j() {
+    public void apacheScreen() {
+
+        WebElement apache = driver.findElement (By.cssSelector ("#navbar-collapse > nav > ul > li:nth-child(8)"));
+        apache.click ();
+
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
+
+    }
+
+    public void katalonScreen() {
+
+        WebElement katalon = driver.findElement (By.cssSelector ("#navbar-collapse > nav > ul > li:nth-child(9)"));
+        katalon.click ();
+
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
+
+    }
+
+    public void log4jScreen() {
+
+        WebElement log4j = driver.findElement (By.cssSelector ("#navbar-collapse > nav > ul > li:nth-child(10)"));
+        log4j.click ();
+
+        System.out.println (driver.findElement (By.xpath ("//div[3]/div/section/div[1]")).getText ());
 
     }
 
