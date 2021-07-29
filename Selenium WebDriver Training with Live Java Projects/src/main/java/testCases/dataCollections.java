@@ -11,8 +11,9 @@ public class dataCollections {
         System.out.println (arrayList);
 
     }
+
     // Hashsets are part of Sets which represent Unordered and Unique valued collection
-    public void hashsetTrial(){
+    public void hashsetTrial() {
 
         HashSet<String> set = new HashSet<String> ();
 

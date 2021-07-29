@@ -12,24 +12,20 @@ import java.io.IOException;
 
 public class everythingExcel {
 
-    public static void main(String[] args) {
-
-    }
-
     public String file_path = (System.getProperty ("user.dir") + "\\src\\main\\resources\\myExcelFile.xlsx");
-
     // Data streams
     public FileInputStream fileInputStream = null;
     public FileOutputStream fileOutputStream = null;
-
     // Initializing Excel workbook
     XSSFWorkbook wrkBook = new XSSFWorkbook ();
-
     // Initialising Excel sheet and data rows and columns
     XSSFSheet wrkSheet;
-
     private XSSFRow rows = null;
     private XSSFCell cellIndex = null;
+
+    public static void main(String[] args) {
+
+    }
 
     // Initiates the connection of Input Stream from Excel file to the workbook
     public void loadExcel_InputStream(String file_path) {
@@ -47,7 +43,7 @@ public class everythingExcel {
     }
 
     // Initiates the connection of Output Stream between the workbook and Excel file
-    public void loadExcel_OPStream(String file_path){
+    public void loadExcel_OPStream(String file_path) {
 
         this.file_path = file_path;
         try {
@@ -74,7 +70,7 @@ public class everythingExcel {
 //        cellB.setCellValue ("Second cell First Sheet");
 
         // Writing data using loops
-        for (int rowIndex = 0; rowIndex < 20; rowIndex++) {
+        for (int rowIndex = 0 ;rowIndex < 20 ;rowIndex++) {
 
             rows = wrkSheet.createRow (rowIndex);
 
@@ -127,7 +123,7 @@ public class everythingExcel {
             return true;
     }
 
-    public void readExcel(){
+    public void readExcel() {
 
         loadExcel_InputStream (file_path);
 
@@ -157,11 +153,11 @@ public class everythingExcel {
                     }
                 }
 
-            fileInputStream.close ();
+                fileInputStream.close ();
 
-        }
+            }
 
-    } catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace ();
         }
 

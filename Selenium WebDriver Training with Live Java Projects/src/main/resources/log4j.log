@@ -1,0 +1,5 @@
+INFO    2021-07-29 20:28:03,267 [main] log4j.generateLog4j  - This is a information log
+ERROR   2021-07-29 20:28:03,269 [main] log4j.generateLog4j  - This is a error log
+INFO    2021-07-29 20:29:29,280 [main] log4j.generateLog4j  - This is a information log
+ERROR   2021-07-29 20:29:29,282 [main] log4j.generateLog4j  - This is a error log
+WARN    2021-07-29 20:29:29,282 [main] log4j.generateLog4j  - This is a warning log
